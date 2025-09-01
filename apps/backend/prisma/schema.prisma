@@ -34,3 +34,11 @@ model Account{
 
 }
 
+
+model VerificationToken{
+  id Int @default(autoincrement()) @id
+  identifier String @unique
+  token String @unique
+  expiry DateTime
+}
+
